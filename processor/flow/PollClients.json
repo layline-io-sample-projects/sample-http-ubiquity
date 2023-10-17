@@ -1,0 +1,49 @@
+{
+  "@type" : "processorFlow/javaScript",
+  "assetClass" : "processorFlow",
+  "assetType" : "javaScript",
+  "uuid" : "dc695c6e-b184-4129-b302-44c072cd954a",
+  "checksum" : "b001830ee2efb106b1ded207d1184e676ea795cfff9d98d5c5c635067a0813c6",
+  "name" : "PollClients",
+  "inputPorts" : [
+    {
+      "modifier" : "add",
+      "uuid" : "13de4893-da8a-4940-b7ce-b0628c8e84ae",
+      "name" : "Input-1",
+      "description" : null
+    }
+  ],
+  "outputPorts" : [
+    {
+      "modifier" : "add",
+      "uuid" : "3662682b-8aae-43d6-aae9-8a73e749963e",
+      "name" : "Output-DevNull",
+      "description" : null
+    },
+    {
+      "modifier" : "add",
+      "uuid" : "f570beb0-7914-4f90-a82f-1fea26797ddd",
+      "name" : "Output-File",
+      "description" : null
+    }
+  ],
+  "failureHandling" : {
+    "streamRetry" : {
+      "maxRetries" : 3,
+      "minBackoff" : 10000,
+      "maxBackoff" : null
+    },
+    "streamStart" : "RETRY_STREAM"
+  },
+  "rootScript" : "src/main/service.js",
+  "serviceMappings" : [
+    {
+      "uuid" : "52e9ecf4-5579-46e6-a9da-8afbb210a3fe",
+      "modifier" : "add",
+      "name" : "Unifi",
+      "description" : null,
+      "physicalServiceUuid" : "ed88369e-e29b-4e8f-bb50-9f055f047a81"
+    }
+  ],
+  "isInstance" : true
+}

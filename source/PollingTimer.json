@@ -1,0 +1,24 @@
+{
+  "@type" : "source/timer",
+  "assetClass" : "source",
+  "assetType" : "timer",
+  "uuid" : "8c22b6d1-9def-4a49-8c2c-6094593670a8",
+  "checksum" : "5c452db1880aae54fff6766b4761654f7fdf5a44f9dcf1fba25636c4ea64d4f3",
+  "name" : "PollingTimer",
+  "streamType" : "BATCH",
+  "streamName" : "UnifiData",
+  "batchCreationType" : "FIXED_RATE",
+  "batchCreationInterval" : "15",
+  "batchClosingMode" : "ALL_TIMERS_FIRED",
+  "timerEvents" : [
+    {
+      "@type" : "source/timer/cyclic",
+      "modifier" : "add",
+      "uuid" : "3d35473d-5b42-4bfa-bc18-605b089d0fe2",
+      "name" : "PollingTimer",
+      "description" : null,
+      "payload" : [ ],
+      "interval" : "1000"
+    }
+  ]
+}

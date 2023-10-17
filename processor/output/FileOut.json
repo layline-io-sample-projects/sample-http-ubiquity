@@ -1,0 +1,21 @@
+{
+  "@type" : "processorOutput/stream",
+  "assetClass" : "processorOutput",
+  "assetType" : "stream",
+  "uuid" : "60b65682-3482-4333-86fe-485c6ef1fcf2",
+  "checksum" : "b312925429dadc53a02c28dd32540a5da3ceeb080a4e5ce367dc24a2a5d6d03f",
+  "name" : "FileOut",
+  "inputPorts" : [
+    {
+      "modifier" : "add",
+      "uuid" : "946b9584-2d9c-4c1e-8ace-f0be198c588b",
+      "name" : "Input-1",
+      "description" : null
+    }
+  ],
+  "sinkUuid" : "d127849d-4635-4f31-97ba-8306ecb5f546",
+  "formatUuid" : "7f057b37-8dd0-441a-a297-26ac1f314861",
+  "failureHandling" : { },
+  "singleMessageStream" : false,
+  "isInstance" : true
+}

@@ -1,0 +1,17 @@
+{
+  "@type" : "processorInput/message",
+  "assetClass" : "processorInput",
+  "assetType" : "message",
+  "uuid" : "d6f9ab4c-780f-49d2-add3-e779d9ea6b62",
+  "checksum" : "0a33e3033bf2c196a86c1e26c97cb3078129f6fa36a8b4912f73e2444768bc83",
+  "name" : "Input",
+  "outputPort" : {
+    "modifier" : "add",
+    "uuid" : "967fa6bd-df5b-4a3a-8f41-45e5649d68b3",
+    "name" : "Output-1",
+    "description" : null
+  },
+  "sourceUuid" : "8c22b6d1-9def-4a49-8c2c-6094593670a8",
+  "failureHandling" : { },
+  "isInstance" : true
+}

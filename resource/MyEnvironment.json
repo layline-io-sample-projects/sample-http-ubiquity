@@ -1,0 +1,11 @@
+{
+  "@type" : "resource/environment",
+  "assetClass" : "resource",
+  "assetType" : "environment",
+  "uuid" : "418b0ab5-01f2-415a-9f9b-aedda3c33a53",
+  "checksum" : "e923d14afa2205d35e5551a2531bcd17a3447afdb921fa823dd3a9efd092b079",
+  "name" : "MyEnvironment",
+  "environment" : {
+    "outDir" : "\\Users\\andrew"
+  }
+}

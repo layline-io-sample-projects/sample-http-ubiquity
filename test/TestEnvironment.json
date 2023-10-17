@@ -1,0 +1,15 @@
+{
+  "@type" : "test/environment",
+  "assetClass" : "test",
+  "assetType" : "environment",
+  "uuid" : "91911897-439f-46f3-b12d-0d3e81812ce2",
+  "checksum" : "c6e226af7f1eb8614f4d3397e4c03752bc2fa3c40da66b7507d00e0ab58d4160",
+  "name" : "TestEnvironment",
+  "environments" : [
+    {
+      "modifier" : "add",
+      "uuid" : "1de857ad-05ea-4e5c-bbfa-9a6209af94bf",
+      "uuidRef" : "418b0ab5-01f2-415a-9f9b-aedda3c33a53"
+    }
+  ]
+}

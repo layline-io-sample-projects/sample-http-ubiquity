@@ -1,0 +1,77 @@
+{
+  "@type" : "workflow",
+  "assetClass" : "workflow",
+  "assetType" : "workflow",
+  "uuid" : "3ffc9515-7e2f-4020-a1c6-c62b95e477b8",
+  "checksum" : "84b6da5caba067972bd9859bcbb5ec9c8a33c9951682a268aa6a0d1c96f6e94f",
+  "name" : "Poll-Client-List",
+  "weight" : 100,
+  "processorInput" : {
+    "modifier" : "add",
+    "uuid" : "93d30468-63e9-40e9-9f7d-f7a71a64a949",
+    "ref" : "d6f9ab4c-780f-49d2-add3-e779d9ea6b62",
+    "loc" : {
+      "x" : 0.0,
+      "y" : 50.0
+    },
+    "links" : [
+      {
+        "modifier" : "add",
+        "uuid" : "21e56b89-e9df-4f90-a081-8adaf592b509",
+        "name" : "Inpu... -> Serv...",
+        "sourcePort" : "967fa6bd-df5b-4a3a-8f41-45e5649d68b3",
+        "destNode" : "52d7dcea-0785-400f-9a1c-5075b92ecc20",
+        "destPort" : "13de4893-da8a-4940-b7ce-b0628c8e84ae"
+      }
+    ]
+  },
+  "processors" : [
+    {
+      "modifier" : "add",
+      "uuid" : "52d7dcea-0785-400f-9a1c-5075b92ecc20",
+      "ref" : "dc695c6e-b184-4129-b302-44c072cd954a",
+      "loc" : {
+        "x" : 260.0,
+        "y" : 50.0
+      },
+      "links" : [
+        {
+          "modifier" : "add",
+          "uuid" : "7107abb2-7547-4f58-8fba-f0e5fae38b06",
+          "name" : "Serv... -> DevN...",
+          "sourcePort" : "3662682b-8aae-43d6-aae9-8a73e749963e",
+          "destNode" : "df41547c-c23f-419d-b98d-f2386f8e7162",
+          "destPort" : "d9bfd29c-0bcb-4c82-950d-477e283a960d"
+        },
+        {
+          "modifier" : "add",
+          "uuid" : "b564a7bc-edd1-42f8-8c31-38c10b1a8b52",
+          "name" : "Poll... -> File...",
+          "sourcePort" : "f570beb0-7914-4f90-a82f-1fea26797ddd",
+          "destNode" : "ed75b333-7270-4aa8-a4c3-9a530c2fe064",
+          "destPort" : "946b9584-2d9c-4c1e-8ace-f0be198c588b"
+        }
+      ]
+    },
+    {
+      "modifier" : "add",
+      "uuid" : "df41547c-c23f-419d-b98d-f2386f8e7162",
+      "ref" : "3a6004ed-0ab4-4998-be22-8ccae5471ef5",
+      "loc" : {
+        "x" : 545.814453125,
+        "y" : 0.0
+      },
+      "links" : null
+    },
+    {
+      "modifier" : "add",
+      "uuid" : "ed75b333-7270-4aa8-a4c3-9a530c2fe064",
+      "ref" : "60b65682-3482-4333-86fe-485c6ef1fcf2",
+      "loc" : {
+        "x" : 547.490234375,
+        "y" : 150.0
+      },
+      "links" : null
+    }
+  ]
+}

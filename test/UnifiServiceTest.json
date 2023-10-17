@@ -1,0 +1,34 @@
+{
+  "@type" : "test/service",
+  "assetClass" : "test",
+  "assetType" : "service",
+  "uuid" : "1326569f-4cbe-42e8-bf74-5f77dcd71aa6",
+  "checksum" : "26f40bdb9a0452d2d77b338631d649691fc42aec86f431cd1e34136ee48a9b22",
+  "name" : "UnifiServiceTest",
+  "service" : "ed88369e-e29b-4e8f-bb50-9f055f047a81",
+  "functionTests" : [
+    {
+      "uuid" : "712a388f-b72b-4036-ad42-1e675ee98116",
+      "modifier" : "add",
+      "name" : "LoginTest",
+      "description" : null,
+      "function" : "a2839e94-bb94-4cc8-a2ca-0b463fba55f0",
+      "parameterMessage" : "{\"Parameter\":{\"Credentials\":{\"username\":\"andrew@thetans.de\",\"password\":\"fekmaj-pahgE7-pyjwiq\"}}}",
+      "expectedResult" : null,
+      "anchor" : {
+        "relation" : "BEGIN",
+        "base" : null
+      }
+    },
+    {
+      "uuid" : "d5baab6e-ff7e-4061-9536-762c8aa32126",
+      "modifier" : "add",
+      "name" : "AllStatus",
+      "description" : null,
+      "function" : "035a0c6d-7bdb-4979-a724-d5b34ffbef56",
+      "parameterMessage" : "{\"Parameter\":{\"Cookie\":\"csrf_token=eyBvaSdpD5blvCPXs4Qewyb2UfibkRyU; unifises=lc1acoHMcK04DT8cqYgCpuBTDRNJdYNG\"}}",
+      "expectedResult" : null,
+      "anchor" : null
+    }
+  ]
+}

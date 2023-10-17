@@ -1,0 +1,147 @@
+{
+  "@type" : "service/http",
+  "assetClass" : "service",
+  "assetType" : "http",
+  "uuid" : "ed88369e-e29b-4e8f-bb50-9f055f047a81",
+  "checksum" : "0891b1076549d4d53546b543cd5a67d2ddc4963fecc6bd81fddf7a1b7a8c36cf",
+  "name" : "UnifiService",
+  "defaultHost" : "http://localhost:8080",
+  "credentials" : {
+    "@type" : "credentials/none"
+  },
+  "requestsNamespace" : "Unifi.Requests",
+  "requests" : [
+    {
+      "uuid" : "73167951-0212-4363-8816-496dac09c370",
+      "modifier" : "add",
+      "name" : "Login",
+      "description" : null,
+      "method" : "POST",
+      "path" : "/api/login",
+      "parameters" : [
+        {
+          "@type" : "service/http/parameter/body/simpleJson",
+          "uuid" : "8264d5ef-e5f0-4493-b356-7ecbb91121d7",
+          "modifier" : "add",
+          "name" : "Credentials",
+          "description" : null,
+          "optional" : true,
+          "dataDictionaryType" : "System.AnyMap",
+          "contentType" : null
+        },
+        {
+          "@type" : "service/http/parameter/header",
+          "uuid" : "a36a6b23-43cc-4a91-abe5-21e383289447",
+          "modifier" : "add",
+          "name" : "Content-Type",
+          "description" : null,
+          "optional" : true,
+          "dataDictionaryType" : "System.String"
+        }
+      ]
+    },
+    {
+      "uuid" : "27770cec-c8cc-4b74-8ee6-3bebac39f34c",
+      "modifier" : "add",
+      "name" : "AllStatus",
+      "description" : "Get the status of all connected clients",
+      "method" : "GET",
+      "path" : "/api/s/default/stat/alluser",
+      "parameters" : [
+        {
+          "@type" : "service/http/parameter/header",
+          "uuid" : "49d7f1d5-987d-4c72-8ef6-fda3a9adef40",
+          "modifier" : "add",
+          "name" : "Cookie",
+          "description" : null,
+          "optional" : true,
+          "dataDictionaryType" : "System.String"
+        }
+      ]
+    }
+  ],
+  "responsesNamespace" : "Unifi.Responses",
+  "responses" : [
+    {
+      "@type" : "service/http/response/simpleType",
+      "uuid" : "40874c17-6062-410f-a588-99884b13f973",
+      "modifier" : "add",
+      "name" : "OK",
+      "description" : null,
+      "statusCodePatterns" : "200",
+      "contentTypePatterns" : "*/*",
+      "dataDictionaryTypeName" : "System.String"
+    },
+    {
+      "@type" : "service/http/response/simpleJson",
+      "uuid" : "e0b16dc3-a910-4102-a10b-c2d7f75a0d47",
+      "modifier" : "add",
+      "name" : "4xxFailure",
+      "description" : null,
+      "statusCodePatterns" : "4xx",
+      "contentTypePatterns" : "application/json",
+      "dataDictionaryTypeName" : "System.AnyMap"
+    },
+    {
+      "@type" : "service/http/response/simpleType",
+      "uuid" : "3b6fa741-556f-4cd4-b0d3-2603e75c3885",
+      "modifier" : "add",
+      "name" : "5xxFailure",
+      "description" : null,
+      "statusCodePatterns" : "5xx",
+      "contentTypePatterns" : "*/*",
+      "dataDictionaryTypeName" : "System.String"
+    },
+    {
+      "@type" : "service/http/response/simpleJson",
+      "uuid" : "247c0c04-b88b-4891-86c8-ccc47937fa5d",
+      "modifier" : "add",
+      "name" : "GenericJSON",
+      "description" : null,
+      "statusCodePatterns" : "200",
+      "contentTypePatterns" : "application/json",
+      "dataDictionaryTypeName" : "System.AnyMap"
+    }
+  ],
+  "functionsNamespace" : "Unifi",
+  "functions" : [
+    {
+      "uuid" : "a2839e94-bb94-4cc8-a2ca-0b463fba55f0",
+      "modifier" : "add",
+      "name" : "Login",
+      "description" : null,
+      "request" : "73167951-0212-4363-8816-496dac09c370",
+      "responses" : [
+        {
+          "modifier" : "add",
+          "uuid" : "254858d2-49e9-4e0d-8d40-b02a3ea13a89",
+          "data" : "247c0c04-b88b-4891-86c8-ccc47937fa5d"
+        },
+        {
+          "modifier" : "add",
+          "uuid" : "f47b0ea2-a8e7-406b-8461-9736b1ce2722",
+          "data" : "e0b16dc3-a910-4102-a10b-c2d7f75a0d47"
+        }
+      ]
+    },
+    {
+      "uuid" : "035a0c6d-7bdb-4979-a724-d5b34ffbef56",
+      "modifier" : "add",
+      "name" : "AllStatus",
+      "description" : "Get the status of all connected clients",
+      "request" : "27770cec-c8cc-4b74-8ee6-3bebac39f34c",
+      "responses" : [
+        {
+          "modifier" : "add",
+          "uuid" : "61bfc982-14ce-4e5e-a096-cc96173dc34c",
+          "data" : "247c0c04-b88b-4891-86c8-ccc47937fa5d"
+        },
+        {
+          "modifier" : "add",
+          "uuid" : "b93fde1c-ba9a-42b9-8d03-1acfdcdce341",
+          "data" : "e0b16dc3-a910-4102-a10b-c2d7f75a0d47"
+        }
+      ]
+    }
+  ]
+}

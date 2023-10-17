@@ -1,0 +1,27 @@
+{
+  "@type" : "sink/fileSystem",
+  "assetClass" : "sink",
+  "assetType" : "fileSystem",
+  "uuid" : "d127849d-4635-4f31-97ba-8306ecb5f546",
+  "checksum" : "21735acb8a4ea438f9a8b922cee9ca1608d8dbb29214e3025fccb4d2cdf6eef7",
+  "name" : "EventOutput",
+  "outputDirectory" : "${lay:outDir}",
+  "outputPrefix" : "event_",
+  "outputSuffix" : ".txt",
+  "outputHousekeeping" : {
+    "enabled" : false,
+    "when" : null,
+    "unit" : null,
+    "value" : null
+  },
+  "tempDirectory" : "\\Users\\andrew",
+  "tempPrefix" : "tmp_event_",
+  "tempSuffix" : ".tmp",
+  "archiveHousekeeping" : {
+    "enabled" : null,
+    "when" : null,
+    "unit" : null,
+    "value" : null
+  },
+  "createSubFolders" : false
+}
